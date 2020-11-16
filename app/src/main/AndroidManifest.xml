@@ -15,14 +15,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-<<<<<<< HEAD
-        <activity android:name=".MainActivity"></activity>
-        <activity android:name=".StartingActivity">
-=======
-        <activity android:name=".CameraActivity"></activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".CameraActivity" />
         <activity android:name=".LaunchActivity" />
-        <activity android:name=".MainActivity">
->>>>>>> bbfa5f5ec54fd4c2c4a56bf1a67f12e9cd01ab5b
+        <activity android:name=".StartingActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
