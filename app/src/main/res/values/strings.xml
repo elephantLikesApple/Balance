@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Balance</string>
+    <string name="konfetti">KonfettiView</string>
 </resources>
