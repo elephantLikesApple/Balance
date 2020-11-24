@@ -5,6 +5,7 @@
     <uses-feature
         android:name="android.hardware.camera2"
         android:required="true" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <uses-permission android:name="android.permission.CAMERA" />
@@ -17,7 +18,7 @@
         android:theme="@style/AppTheme">
 
         <activity android:name=".StartingActivity"/>
-        <activity android:name=".CameraActivity"></activity>
+        <activity android:name=".Camera2Activity"></activity>
         <activity android:name=".LaunchActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

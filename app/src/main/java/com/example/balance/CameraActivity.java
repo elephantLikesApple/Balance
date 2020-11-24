@@ -9,7 +9,6 @@ import android.provider.MediaStore;
 import android.view.SurfaceView;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.VideoView;
 
 import androidx.annotation.NonNull;
@@ -70,7 +69,7 @@ public class CameraActivity extends AppCompatActivity
                         @Override
                         public void onClick(View view) {
 
-                            ActivityCompat.requestPermissions(CameraActivity.this, REQUIRED_PERMISSIONS,
+                            ActivityCompat.requestPermissions(Camera2Activity.this, REQUIRED_PERMISSIONS,
                                     PERMISSIONS_REQUEST_CODE);
                         }
                     }).show();
