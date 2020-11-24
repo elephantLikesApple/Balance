@@ -1,20 +1,13 @@
 package com.example.balance;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
 import android.content.Intent;
-import android.graphics.Camera;
-import android.hardware.camera2.CameraManager;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.VideoView;
 
 public class MainActivity extends AppCompatActivity {
     ImageButton CameraButton, GraphButton;
@@ -36,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         CameraButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getBaseContext(), CameraActivity.class);
+                Intent intent = new Intent(getBaseContext(), Camera2Activity.class);
                 startActivity(intent);
             }
         });
