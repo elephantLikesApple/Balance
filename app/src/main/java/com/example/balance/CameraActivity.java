@@ -69,7 +69,7 @@ public class CameraActivity extends AppCompatActivity
                         @Override
                         public void onClick(View view) {
 
-                            ActivityCompat.requestPermissions(Camera2Activity.this, REQUIRED_PERMISSIONS,
+                            ActivityCompat.requestPermissions(CameraActivity.this, REQUIRED_PERMISSIONS,
                                     PERMISSIONS_REQUEST_CODE);
                         }
                     }).show();
@@ -102,6 +102,7 @@ public class CameraActivity extends AppCompatActivity
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         //super.onActivityResult(requestCode, resultCode, data);
+        super.onActivityResult(requestCode, resultCode, data);
         if (resultCode == RESULT_OK && requestCode == 1) {
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             VideoView videoView = new VideoView(this);
@@ -125,7 +126,8 @@ public class CameraActivity extends AppCompatActivity
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grandResults) {
 
-        if ( requestCode == PERMISSIONS_REQUEST_CODE && grandResults.length == REQUIRED_PERMISSIONS.length) {
+        super.onRequestPermissionsResult(requestCode, permissions, grandResults);
+        if (requestCode == PERMISSIONS_REQUEST_CODE && grandResults.length == REQUIRED_PERMISSIONS.length) {
 
             boolean check_result = true;
 
@@ -136,11 +138,10 @@ public class CameraActivity extends AppCompatActivity
                 }
             }
 
-            if ( check_result ) {
+            if (check_result) {
 
                 startCamera();
-            }
-            else {
+            } else {
 
                 if (ActivityCompat.shouldShowRequestPermissionRationale(this, REQUIRED_PERMISSIONS[0])
                         || ActivityCompat.shouldShowRequestPermissionRationale(this, REQUIRED_PERMISSIONS[1])) {
@@ -155,7 +156,7 @@ public class CameraActivity extends AppCompatActivity
                         }
                     }).show();
 
-                }else {
+                } else {
 
                     Snackbar.make(mLayout, "설정(앱 정보)에서 퍼미션을 허용해야 합니다. ",
                             Snackbar.LENGTH_INDEFINITE).setAction("확인", new View.OnClickListener() {

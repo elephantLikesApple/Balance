@@ -13,7 +13,7 @@ android {
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
-
+        applicationId "org.tensorflow.lite.examples.posenet"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
     }
@@ -43,6 +43,7 @@ apply from:'download.gradle'
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(":posenet")
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.core:core-ktx:1.1.0'
     testImplementation 'junit:junit:4.12'
